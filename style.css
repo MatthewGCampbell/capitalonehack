@@ -126,3 +126,12 @@
     transform: translate(0, -0px); 
   }   
 }
+/* End of Animation */
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}

@@ -5,7 +5,11 @@ var bubbles = document.getElementById("bubble");
 function waitForStyle(){
   if(style !== "undefined"){
     function bounceIn() {
-      bubbles.style.animation = "bounceIn 5s";
+      bubbles.style.transform = "scale(0)";
+      setTimeout(2);
+      bubbles.style.transform = "scale(1)";
+      setTimeout(2);
+      bubbles.style.transform = "scale(0)";
     }
     window.onload=function(){
       bounceIn();

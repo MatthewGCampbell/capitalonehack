@@ -31,7 +31,7 @@ function waitForElement(){
     for (var i = 0; i < bubbles.length; i++) {
       place_bubble(bubbles[i]);
     }
-    document.getElementsByClassName('bubbles')[0].style.visibility = 'visible';
+    document.getElementsByClassName('trending-coins')[0].style.visibility = 'visible';
   }
   else{
       setTimeout(waitForElement, 250);
@@ -58,3 +58,18 @@ window.onload=function(){
   getData();
   waitForElement();
 }
+// add gravity to bubbles
+function gravity(bubble) {
+  bubble.style.top = parseInt(bubble.style.top) + 1 + 'px';
+  if (parseInt(bubble.style.top) < window.innerHeight) {
+    setTimeout(function () {
+      gravity(bubble);
+    }, 1);
+  }
+}
+function individual_bubbles(num) {
+  bubbles =  document.getElementsByClassName('bubbles')[0];
+  var bubbles = ('bubbles')[0];
+}
+individual_bubbles(1);
+// add bubbles

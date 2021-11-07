@@ -9,6 +9,14 @@ function waitForElement(){
     document.getElementById("coin5-info").innerText = coin5_info.item.id;
     document.getElementById("coin6-info").innerText = coin6_info.item.id;
     document.getElementById("coin7-info").innerText = coin7_info.item.id;
+    // CryptoTickers
+    document.getElementById("coin1-ticker").innerText = coin1_info.item.symbol;
+    document.getElementById("coin2-ticker").innerText = coin2_info.item.symbol;
+    document.getElementById("coin3-ticker").innerText = coin3_info.item.symbol;
+    document.getElementById("coin4-ticker").innerText = coin4_info.item.symbol;
+    document.getElementById("coin5-ticker").innerText = coin5_info.item.symbol;
+    document.getElementById("coin6-ticker").innerText = coin6_info.item.symbol;
+    document.getElementById("coin7-ticker").innerText = coin7_info.item.symbol;
   }
   else{
       setTimeout(waitForElement, 250);

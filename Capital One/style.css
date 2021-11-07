@@ -1,0 +1,114 @@
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color:black;
+  text-align: center;
+}
+
+
+/* Animate bubbless */
+.bubbles {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  position:absolute;
+}
+
+.bubbles span {
+  display: block;
+  border: 5px;
+  border-radius: 50%;
+  animation-name: floating; 
+  animation-duration: 3s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  background-color: blanchedalmond;
+  --x-speed: 13s;
+  --y-speed: 7s;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.bubbles span:nth-child(1) {
+  height: 160px;
+  width: 160px;
+  opacity: 0.9;
+  animation-delay: 0.3s;
+}
+
+.bubbles span:nth-child(2) {
+  height: 190px;
+  width: 190px;
+  opacity: 0.9;
+  background-color: blanchedalmond;
+  animation-delay: 0.3s;
+  animation-duration: 2.3s;
+}
+
+.bubbles span:nth-child(3) {
+  height: 140px;
+  width: 140px;
+  opacity: 0.9;
+  background-color: blanchedalmond;
+  animation-delay: 0.5s;
+  animation-duration: 2.6s;
+}
+
+.bubbles span:nth-child(4) {
+  height: 200px;
+  width: 200px;
+  opacity: 0.9;
+  background-color: blanchedalmond;
+  animation-delay: 0.7s;
+  animation-duration: 2.3s;
+}
+.bubbles span:nth-child(5) {
+  height: 200px;
+  width: 200px;
+  opacity: 0.9;
+  background-color: blanchedalmond;
+  animation-delay: 0.7s;
+  animation-duration: 2.3s;
+}
+.bubbles span:nth-child(6) {
+  height: 200px;
+  width: 200px;
+  opacity: 0.9;
+  background-color: blanchedalmond;
+  animation-delay: 0.7s;
+  animation-duration: 2.3s;
+}
+
+.bubbles span:nth-child(7) {
+  height: 200px;
+  width: 200px;
+  opacity: 0.9;
+  background-color: blanchedalmond;
+  animation-delay: 0.7s;
+  animation-duration: 2.3s;
+}
+
+/* Animation */
+@keyframes bounceIn {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+@keyframes floating {
+  0% { 
+    transform: translate(0,  0px); 
+  }
+  50%  { 
+    transform: translate(0, 15px); 
+  }
+  100%   { 
+    transform: translate(0, -0px); 
+  }   
+}

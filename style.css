@@ -6,7 +6,15 @@
   color:black;
   text-align: center;
 }
-
+.bubbles {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bubbles {
   animation: bounceIn 3s;
   top: 50%;

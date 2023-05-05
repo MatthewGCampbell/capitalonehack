@@ -73,3 +73,50 @@ function individual_bubbles(num) {
 }
 individual_bubbles(1);
 // add bubbles
+
+
+// Using GreenSock's TweenMax library
+const bubbles = $('.bubbles');
+
+bubbles.on('click', function() {
+  const bubbles = $(this);
+  
+  // Animate the bubble's size and position using TweenMax
+  TweenMax.to(bubbles, 0.5, {
+    width: 150,
+    height: 150,
+    top: '50%',
+    left: '50%',
+    ease: Power1.easeInOut
+  });
+
+  // Animate the other bubbles to shrink and fade out using TweenMax
+  bubbles.not(bubbles).each(function() {
+    TweenMax.to($(this), 0.5, {
+      width: 0,
+      height: 0,
+      opacity: 0,
+      ease: Power1.easeInOut
+    });
+  });
+
+  // Add the 'active' class to the clicked bubble after the animation completes
+  setTimeout(function() {
+    bubbles.addClass('active');
+  }, 500);
+
+  // Remove the 'active' class and reset the bubbles after two seconds
+  setTimeout(function() {
+    bubbles.removeClass('active');
+    bubbles.each(function() {
+      TweenMax.to($(this), 0.5, {
+        width: $(this).attr('data-width'),
+        height: $(this).attr('data-height'),
+        top: $(this).attr('data-top'),
+        left: $(this).attr('data-left'),
+        opacity: 1,
+        ease: Power1.easeInOut
+      });
+    });
+  }, 2000);
+});

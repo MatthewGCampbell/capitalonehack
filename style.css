@@ -99,7 +99,11 @@
   animation-delay: 0.7s;
   animation-duration: 2.3s;
 }
-
+.bubbles.active {
+  background-color: #fff;
+  box-shadow: 0 0 20px #fff;
+  animation: pulse 1s infinite;
+}
 /* Animation */
 @keyframes bounceIn {
   0%{
@@ -125,6 +129,17 @@
   100%   { 
     transform: translate(0, -0px); 
   }   
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 /* End of Animation */
 /* Responsive */
